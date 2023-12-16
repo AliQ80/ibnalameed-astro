@@ -5,25 +5,64 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/MainLayout.astro';
+import TeamCard from '../utils/TeamCard.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'Faculty',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
-  <Hero
-    tagline="Services"
-    title="Elevate your projects with our stunning templates"
-    subtitle="Explore our meticulously crafted templates tailored to various industries and purposes. From captivating presentations to functional website designs, we offer the tools you need to succeed."
-    actions={[{ variant: 'primary', target: '_blank', text: 'Start exploring', href: '/' }]}
+  <!-- <Hero
+    tagline="Meet Our"
+    title="Faculty"
+    subtitle=""
+    actions={[{ variant: 'primary', target: '_blank', text: 'Home Page', href: '/' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      src: '',
+      alt: 'AstroWind Hero Image',
+    }}
+  /> -->
+  <Hero
+    tagline="Meet Our"
+    title="Faculty"
+    subtitle=""
+    image={{
+      src: '',
       alt: 'AstroWind Hero Image',
     }}
   />
+
+  <section class="mb-section max-w-[1000px] mx-auto px-4">
+    <header class="mb-8 grid gap-4 md:grid-cols-2 md:gap-8">
+      <h2 class="text-2xl font-medium md:text-3xl">Adimination</h2>
+    </header>
+  </section>
+
+  <section
+    class="text-white max-w-[1000px] mx-auto px-4 h-[35rem] grid gap-4 md:h-[30rem] md:grid-cols-2 lg:grid-cols-4"
+  >
+    <TeamCard name="Thomas Mueler" job="director" alt="some people" src="images/team/man_01.jpg" />
+    <!-- <TeamCard name="Daniel Salasar" alt="some people" src="images/team/man_02.jpg" /> -->
+    <!-- <TeamCard name="Eduardo Franco" alt="some people" src="images/team/man_03.jpg" /> -->
+    <!-- <TeamCard name="Max Alfredo" alt="some people" src="images/team/man_04.jpg" /> -->
+  </section>
+
+  <section class="mb-section max-w-[1000px] mx-auto px-4">
+    <header class="mb-8 mt-16 grid gap-4 md:grid-cols-2 md:gap-8">
+      <h2 class="text-2xl font-medium md:text-3xl">Computer Science Department</h2>
+    </header>
+  </section>
+
+  <section
+    class="text-white max-w-[1000px] mx-auto px-4 h-[35rem] grid gap-4 md:h-[30rem] md:grid-cols-2 lg:grid-cols-4"
+  >
+    <!-- <TeamCard name="Thomas Mueler" alt="some people" src="images/team/man_01.jpg" /> -->
+    <TeamCard name="Daniel Salasar" job="Teacher" alt="some people" src="images/team/man_02.jpg" />
+    <TeamCard name="Eduardo Franco" job="Teacher" alt="some people" src="images/team/man_03.jpg" />
+    <!-- <TeamCard name="Max Alfredo" alt="some people" src="images/team/man_04.jpg" /> -->
+  </section>
 
   <!-- Features2 Widget ************** -->
 
